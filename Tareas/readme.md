@@ -16,7 +16,7 @@
 
 
 > [!IMPORTANT]  
-> Borrar un contenedor docker container rm -f <nombre_o_id> <--- las tres ultimos caracteres
+> Para borrar un contenedor: docker container rm -f <nombre_o_id> <--- las tres ultimos caracteres
 
 
 ```
