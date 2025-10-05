@@ -70,7 +70,8 @@ docker container run  \
 
 - Accedes desde http://localhost:8080 y podras ver el host, usuario y contra, para esta oportunidad  example-user  es neustro usuario y  secret-password es nuestra password
 
-> [!IMPORTANT]  Redes!
+> [!IMPORTANT]  
+> Redes!
 > Regla de oro
 > si dos o mas contenedores estan en la misma red, podran hablar entre si. Si no lo estan no podran.
 > por ende habra que hacer referencia entre phpmyadmin y world-db que es nuestro servidor
