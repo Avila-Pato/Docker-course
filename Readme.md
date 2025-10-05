@@ -14,17 +14,14 @@
 
 4. Revisar que efectivamente tengamos la data
 
-<!-- Completa -->
-docker container run `
-  -d -p 3306:3306 `
-  --name world-db `
-  --env MARIADB_USER=example-user `
-  --env MARIADB_PASSWORD=root-secret-password `
-  --env MARIADB_ROOT_PASSWORD=root-secret-password `
-  --env MARIADB_DATABASE=world-db `
-  mariadb:jammy
-<!--  -->
-
+> docker container run `
+>  -d -p 3306:3306 `
+>  --name world-db `
+>  --env MARIADB_USER=example-user `
+>  --env MARIADB_PASSWORD=root-secret-password `
+>  --env MARIADB_ROOT_PASSWORD=root-secret-password `
+>  --env MARIADB_DATABASE=world-db `
+>  mariadb:jammy
 
 
   ## Creditos a el curso
