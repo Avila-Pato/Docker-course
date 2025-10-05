@@ -13,7 +13,7 @@
 3. Ejecutar el query de creación de tablas e inserción proporcionado
 
 4. Revisar que efectivamente tengamos la data
-
+<div align="right" style="border-right: 4px solid #0366d6; padding: 8px;">
 > docker container run `
 >  -d -p 3306:3306 `
 >  --name world-db `
@@ -22,6 +22,8 @@
 >  --env MARIADB_ROOT_PASSWORD=root-secret-password `
 >  --env MARIADB_DATABASE=world-db `
 >  mariadb:jammy
+
+</div>
 
 
   ## Creditos a el curso
