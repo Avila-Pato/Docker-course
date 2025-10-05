@@ -1,4 +1,4 @@
-# Tarea
+# Tarea 1 Montando un contenedor
 
 1. Montar la imagen de MariaDB con el tag jammy, publicar en el puerto 3306 del contenedor con el puerto 3306 de nuestro equipo, colocarle el nombre al contenedor de world-db (--name world-db) y definir las siguientes variables de entorno:
 
@@ -15,6 +15,11 @@
 4. Revisar que efectivamente tengamos la data
 
 
+[IMPORTANT]
+
+- Borrar un contenedor docker container rm -f 
+
+
 ```
 docker container run `
  -d -p 3306:3306 `
@@ -25,3 +30,19 @@ docker container run `
  --env MARIADB_DATABASE=world-db `
  mariadb:jammy
 ```
+
+# Volumenes y  Redes
+
+```
+docker container run `
+ -d -p 3306:3306 `
+ --name world-db `
+ --env MARIADB_USER=example-user `
+ --env MARIADB_PASSWORD=root-secret-password `
+ --env MARIADB_ROOT_PASSWORD=root-secret-password `
+ --env MARIADB_DATABASE=world-db `
+ --volume world-db:/var/lib/mysql `
+ mariadb:jammy
+```
+-  en el comando --volume world-db:/var/lib/mysql, world-db es el nombre que le da al volumen que se va a crear en nuestra máquina y el /var/lib/mysql es la ruta donde el contenedor guarda los datos, esta ruta normalmente la proporciona la documentación de la imagen en Docker Hub.
+
