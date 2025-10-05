@@ -14,6 +14,10 @@
 
 4. Revisar que efectivamente tengamos la data
 
+> [!TIPS]
+> Mostrar contenedor: docker container ls
+> Mostrar imagenes:  docker image ls  
+
 
 > [!IMPORTANT]  
 > Para borrar un contenedor: docker container rm -f <nombre_o_id> <--- las tres ultimos caracteres
@@ -75,5 +79,13 @@ docker container run  \
 > Regla de oro
 > si dos o mas contenedores estan en la misma red, podran hablar entre si. Si no lo estan no podran.
 > por ende habra que hacer referencia entre phpmyadmin y world-db que es nuestro servidor
+
+# Redes y contenedores
+
+> [!TIPS]
+> docker network: lista de comandos para network 
+
+
+
 
 
