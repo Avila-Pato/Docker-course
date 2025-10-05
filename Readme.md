@@ -26,10 +26,7 @@ docker container run `
  --env MARIADB_ROOT_PASSWORD=root-secret-password `
  --env MARIADB_DATABASE=world-db `
  mariadb:jammy
-
-</div>
 ```bash
-
 
   ## Creditos a el curso
 **[Docker - Guía práctica de uso para desarrolladores](https://www.udemy.com/course/docker-guia-practica/)**  
