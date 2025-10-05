@@ -30,7 +30,7 @@ docker container run `
  mariadb:jammy
 ```
 
-# Volumenes y  Redes
+# Volumenes y persistencia
 
 ```
 docker container run `
@@ -45,3 +45,24 @@ docker container run `
 ```
 -  en el comando --volume world-db:/var/lib/mysql, world-db es el nombre que le da al volumen que se va a crear en nuestra máquina y el /var/lib/mysql es la ruta donde el contenedor guarda los datos, esta ruta normalmente la proporciona la documentación de la imagen en Docker Hub.
 
+
+
+# levantando un contenedor php
+
+- version: phpmyadmin:5.2.0-apache
+
+```
+docker run -d \
+  --name my-phpmyadmin \
+  -e PMA_HOST=localhost \
+  -p 8080:80 \
+  phpmyadmin:5.2.0-apache
+```
+
+- -d → corre el contenedor en segundo plano.
+
+- --name my-phpmyadmin → le da un nombre al contenedor.
+
+- -e PMA_HOST=localhost → le indica a phpMyAdmin el host del servidor MySQL/MariaDB al que conectarse (si tu contenedor de MariaDB se llama world-db, pon PMA_HOST=world-db).
+
+- -p 8080:80 → expone el puerto 80 del contenedor en el puerto 8080 de tu máquina.
