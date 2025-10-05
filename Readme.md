@@ -15,11 +15,7 @@
 4. Revisar que efectivamente tengamos la data
 
 
-
-
-<div style="background-color:#eaf5ff; padding:10px; border-radius:6px;">
-
-```bash
+```
 docker container run `
  -d -p 3306:3306 `
  --name world-db `
@@ -28,7 +24,8 @@ docker container run `
  --env MARIADB_ROOT_PASSWORD=root-secret-password `
  --env MARIADB_DATABASE=world-db `
  mariadb:jammy
----
+```
+
 
   ## Creditos a el curso
 **[Docker - Guía práctica de uso para desarrolladores](https://www.udemy.com/course/docker-guia-practica/)**  
