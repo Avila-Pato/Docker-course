@@ -52,9 +52,10 @@ docker container run `
 - version: phpmyadmin:5.2.0-apache
 
 ```
-docker run -d \
+docker container run  \
   --name my-phpmyadmin \
-  -e PMA_HOST=localhost \
+  -d \
+  -e PMA_ARBITRARY=1 \
   -p 8080:80 \
   phpmyadmin:5.2.0-apache
 ```
@@ -63,6 +64,15 @@ docker run -d \
 
 - --name my-phpmyadmin → le da un nombre al contenedor.
 
-- -e PMA_HOST=localhost → le indica a phpMyAdmin el host del servidor MySQL/MariaDB al que conectarse (si tu contenedor de MariaDB se llama world-db, pon PMA_HOST=world-db).
+- -e PMA_HOST=localhost → permite conectarte a cualquier servidor MySQL/MariaDB, incluso si no está en la misma red de Docker
 
 - -p 8080:80 → expone el puerto 80 del contenedor en el puerto 8080 de tu máquina.
+
+- Accedes desde http://localhost:8080 y podras ver el host, usuario y contra, para esta oportunidad  example-user  es neustro usuario y  secret-password es nuestra password
+
+> [!IMPORTANT]  Redes!
+> Regla de oro
+> si dos o mas contenedores estan en la misma red, podran hablar entre si. Si no lo estan no podran.
+> por ende habra que hacer referencia entre phpmyadmin y world-db que es nuestro servidor
+
+
