@@ -15,9 +15,8 @@
 4. Revisar que efectivamente tengamos la data
 
 
-[IMPORTANT]
-
-- Borrar un contenedor docker container rm -f 
+> [!IMPORTANT]  
+> Borrar un contenedor docker container rm -f 
 
 
 ```
