@@ -1,4 +1,4 @@
-# Tarea 1 Montando un contenedor
+# Montando un contenedor
 
 1. Montar la imagen de MariaDB con el tag jammy, publicar en el puerto 3306 del contenedor con el puerto 3306 de nuestro equipo, colocarle el nombre al contenedor de world-db (--name world-db) y definir las siguientes variables de entorno:
 
