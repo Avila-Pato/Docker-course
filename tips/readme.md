@@ -83,7 +83,7 @@ docker container run  \
 # Redes y contenedores
 
 > [!TIP]
-> docker network: lista de comandos para network 
+> lista de comandos para network:  docker network
 
 
 
